@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Take URLs in on std in and (when a response is received) output the url and the "final destination" after redirects have been followed
+# Take URLs in on std in and (when a response is received) output the url, the response code and in the case of 30x redirects, the Location header
 
 import sys
 import requests
