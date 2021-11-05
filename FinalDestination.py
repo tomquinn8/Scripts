@@ -12,7 +12,7 @@ requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.
 def getRequest(url):
     try:
         response = requests.get(url, timeout=10, verify = False)
-        if response:
+        if response.url:
             print (url + "|" + response.url.rstrip("/"))
     except Exception:
         pass
