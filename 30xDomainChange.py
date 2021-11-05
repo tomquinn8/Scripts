@@ -23,7 +23,7 @@ def cleanURL(url):
 def getRequest(url):
     try:
         response = requests.get(url, timeout=10, verify = False)
-        if response:
+        if response.url:
             # If original domain is not the same as redirected domain, print url
             # unless the only change is the addition of 'www.'
             if cleanURL(url) != cleanURL(response.url):
